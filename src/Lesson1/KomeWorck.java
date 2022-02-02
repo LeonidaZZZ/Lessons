@@ -34,7 +34,7 @@ class HomeWork {
 //        else {
 //            System.out.println("Треугольник не существует");
 //        }
-//    }
+//    }             // Как логически завершить предыдущую задачу и продолжить с новой ??
 
     public static void main(String[] args) {
         System.out.println("HomeWork ex3");
