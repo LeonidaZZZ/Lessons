@@ -177,16 +177,23 @@ class HomeWork {
 //            System.out.println(i);
 //        }
 //
-//        int x1 = 0;
+//        int x1 = 0;                     // while - цикл с предусловием
 //        boolean isStop = true;
 //
 //        while (isStop){
 //            System.out.println(x1);
+//
+//            x1++;
+//
 //            if (x1 == 10){
 //                isStop =false;
 //            }
-//            x1==;
-//        }
+//
+//
+//
+//        } System.out.println(x1);
+
+
 //        for (int i = 0; i < 10; i++) {
 //            for (int j = 0; j < 10; j++) {
 //
@@ -194,6 +201,9 @@ class HomeWork {
 //
 //
 //        }
+
+
+
 
 //        for (int i = 1; i <= 10; i++) {
 //
@@ -203,6 +213,9 @@ class HomeWork {
 //            System.out.print(i + " ");
 //
 //        }
+
+
+
 //        int gg = 142678;
 //        int count = 0;
 //        while (gg > 0) {
@@ -211,6 +224,8 @@ class HomeWork {
 //        }
 //
 //        System.out.println(count);
+
+
 //
 //        System.out.println("cw 3");
 //
