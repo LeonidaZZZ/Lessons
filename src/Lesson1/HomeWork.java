@@ -152,27 +152,32 @@ public class HomeWork {
 //        int i2 = 3;
 //        double result = (double) i1 / (double) i2;
 //        System.out.println(result);
+//
+//        int gg = 142678;
+//        int countR = 0;
+//        while (gg > 0) {
+//            gg = gg / 10;
+//            countR++;
+//        }
+//        System.out.println(countR);
 
-        int gg = 142678;
-        int countR = 0;
-        while (gg > 0) {
-            gg = gg / 10;
-            countR++;
+//        for (int i = 1; i < 10; i++) {
+//            for (int j = 1; j < 10; j++) {
+//                System.out.print(j * i +"\t" );
+//            }
+//            System.out.println("");
+//
+//
+//        }
+//        int bb = 1;
+//        for (int i = 0; i <20 ; i++) {
+//            bb = bb * 2;
+//            System.out.print(bb + " ");
+
+        for (int i = 0; i < 10; i=i+2){
+            System.out.println(i +" ");
+
         }
-        System.out.println(countR);
-
-        for (int i = 1; i < 10; i++) {
-            for (int j = 1; j < 10; j++) {
-                System.out.print(j * i +"\t" );
-            }
-            System.out.println("");
-
-
-        }
-        int bb = 1;
-        for (int i = 0; i <20 ; i++) {
-            bb = bb * 2;
-            System.out.print(bb + " ");
 
 
 
@@ -181,4 +186,3 @@ public class HomeWork {
 
 
     }
-}
