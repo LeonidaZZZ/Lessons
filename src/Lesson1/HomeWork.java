@@ -174,15 +174,45 @@ public class HomeWork {
 //            bb = bb * 2;
 //            System.out.print(bb + " ");
 
-        for (int i = 0; i < 10; i=i+2){
-            System.out.println(i +" ");
+//        for (int i = 0; i < 10; i=i+2){
+//            System.out.println(i +" ");
 
+        System.out.println(" Задание 1 ");
+
+
+        int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < array.length; i++) {
+
+            System.out.println(array[i] + " ");
         }
 
 
+        System.out.println(" Задача №2 ");
+        int[] arr = new int[50];
+        for (int i = 0; i < arr.length; i++) {
 
 
+
+        }
+        for (int i = arr.length - 1 ; i > 0 ; i--) {
+            System.out.println(arr[i] + " ");
+        }
         }
 
 
     }
+
+
+
+
+
+
+
+
