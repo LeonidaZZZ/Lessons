@@ -1,5 +1,8 @@
 package Lesson1;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class HomeWork {
     public static void main(String[] args) {
 //        int ff = 762;
@@ -180,34 +183,104 @@ public class HomeWork {
         System.out.println(" Задание 1 ");
 
 
-        int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        int[] array;
+        int bb = 0;
 
 
+        for (int i = 0; i < 20; i++) {
+            if (i % 2 == 0) {
+                bb++;
+            }
+
+
+        }
+        System.out.println(bb);
+
+
+        array = new int[bb];
+        int m = 0;
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            array[i] = m;
+
+            m = m + 2;
+
+
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i] + " ");
         }
         System.out.println();
 
-        for (int i = 0; i < array.length; i++) {
-
-            System.out.println(array[i] + " ");
-        }
-
 
         System.out.println(" Задача №2 ");
-        int[] arr = new int[50];
+
+        int size = 0;
+        int[] arr;
+        for (int i = 1; i < 100; i++) {
+            if (i % 2 != 0) {
+                size++;
+            }
+
+
+        }
+        System.out.println(size);
+        arr = new int[size];
+        int v = 1;
         for (int i = 0; i < arr.length; i++) {
 
+            arr[i] = v;
+
+
+            v = v + 2;
+
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        for (int i = arr.length - 1; i > 0; i--) {
+
+            System.out.print(arr[i] + " ");
 
 
         }
-        for (int i = arr.length - 1 ; i > 0 ; i--) {
-            System.out.println(arr[i] + " ");
-        }
-        }
 
+
+        System.out.println(" Задача 3 ");
+
+        int[] ark = new int[15];
+        Random rnd = new Random();
+        for (int i = 0; i < ark.length; i++) {
+            ark[i] = rnd.nextInt(99);
+
+
+        }
+        System.out.println(Arrays.toString(ark));
+
+
+        int is = 0;
+        int it = ark[0];
+        for (int i = 0; i < ark.length; i++) {
+            if (it < ark[i]);
+
+            it = ark[i];
+            is = i;
+
+        }
+        System.out.println(it +" " + is);
 
     }
+
+
+}
+
+
+
+
+
+
+
 
 
 

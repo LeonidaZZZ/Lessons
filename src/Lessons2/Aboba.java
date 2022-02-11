@@ -112,7 +112,7 @@ public class Aboba {
 //
 //        }
 //
-//        System.out.println(Arrays.toString(ints));
+//        System.out.println(Arrays.toString(ints));         //сортировка массива пузырьком
 //
 //        for (int l = 0; l < ints.length; l++) {
 //            for (int j = ints.length - 1; j > l; j--) {
@@ -187,10 +187,64 @@ public class Aboba {
 //            count++;
 //            result = array[i] + result;
 //        }
+        System.out.println(" НОВАЯ ТЕМА ");
+
+        int[][] array = new int[3][3];         // Двумерный Массив
+        System.out.println(array[0].length);
+
+        Random random = new Random();
+
+
+        for (int i = 0; i < array.length; i++) {
+            for (int i1 = 0; i1 < array.length; i1++) {
+                array[i][i1] = random.nextInt(10);
+
+            }
+
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int i1 = 0; i1 < array.length; i1++) {
+                System.out.print(array[i][i1] + " ");
+
+
+            }
+            System.out.println();
+
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int i1 = 0; i1 < array.length; i1++) {
+                if (i == i1) {
+                    System.out.print(array[i][i1] + " ");
+                }
+
+
+            }
+
+
+        }
+        System.out.println();
+        for (int i = 0; i < array.length; i++) {
+            for (int i1 = array.length - 1 - i; i1 >= 0; i1--) {
+
+
+
+                    System.out.print(array[i][i1] + " ");
+                    break;
+                }
+
+
+
+            }
+
+
+
+        }
 
 
     }
-}
+
+
+
 
 
 
