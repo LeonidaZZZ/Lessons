@@ -67,6 +67,8 @@ public class Domashka2 {
 //
 //        }
 //        System.out.println(count);
+
+
 //
 //        System.out.println("cw 2");
 //
@@ -98,47 +100,48 @@ public class Domashka2 {
 
 //        System.out.println("Массив");
 //
-//        int[] array;
 //
-//        int[] array = int[10];
+//        int[] array = new int[10];
 //        array[0] = 92;
 //        array[1] = 0;
 //        array[2] = 45;
-
+//
 //        int i = array[2];
 //        System.out.println(i);
 //
 //        System.out.println(array.length);
 //
-//
-//
-//
-//        int[] ints = [23, 56, 123, 789];
-//
-//        System.out.println(ints.length);
+
 //
 //
 //        int[] ints = {23, 56, 123, 789};
 //
-//        for (int j = 0; j < ints.length; j++) {
+//        System.out.println(ints.length);
+
+//
+        int[] ints = {23, 156, 123, 12};
+//        Arrays.sort(ints);                                  // сортировка для четких пацанов
+
+//        for (int j = 0; j < ints.length; j++) {             //сортировка массива пузырьком
+//
 //            System.out.println(ints[j]);
 //        }
 //        String str = Arrays.toString(ints);
 //        System.out.println(str);
 
-//        System.out.println(Arrays.toString(ints));
-//
-//        for (int i = 0; i < ints.length; i++) {
-//            for (int j = ints.length - 1; j > i; j--) {
-//                if (ints[j - 1] > ints[j]){
-//                    int tmp = ints[j - 1];
-//                    ints[j - 1] = ints[j];
-//                    ints[j] = tmp;
-//                }
-//            }
-//        }
-//
-//        System.out.println(Arrays.toString(ints));
+        System.out.println(Arrays.toString(ints));
+
+        for (int i = 0; i < ints.length; i++) {
+            for (int j = ints.length - 1; j > i; j--) {
+                if (ints[j - 1] > ints[j]){
+                    int tmp = ints[j - 1];
+                    ints[j - 1] = ints[j];
+                    ints[j] = tmp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(ints));
 
 
 //        Random random = new Random();
@@ -185,10 +188,7 @@ public class Domashka2 {
 //        for (int i = 0; i < array.length; i++) {
 //            if (i % 2 == 0) {
 //                array[i] = 0;
-//
 //            }
-//
-//
 //        }
 //        System.out.print(Arrays.toString(array));
 //
