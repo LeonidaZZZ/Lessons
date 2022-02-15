@@ -179,102 +179,232 @@ public class HomeWork {
 
 //        for (int i = 0; i < 10; i=i+2){
 //            System.out.println(i +" ");
+//
+//        System.out.println(" Задание 1 ");
+//
+//
+//        int[] array;
+//        int bb = 0;
+//
+//
+//        for (int i = 0; i < 20; i++) {
+//            if (i % 2 == 0) {
+//                bb++;
+//            }
+//
+//
+//        }
+//        System.out.println(bb);
+//
+//
+//        array = new int[bb];
+//        int m = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = m;
+//
+//            m = m + 2;
+//
+//
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.println(array[i] + " ");
+//        }
+//        System.out.println();
+//
+//
+//        System.out.println(" Задача №2 ");
+//
+//        int size = 0;
+//        int[] arr;
+//        for (int i = 1; i < 100; i++) {
+//            if (i % 2 != 0) {
+//                size++;
+//            }
+//
+//
+//        }
+//        System.out.println(size);
+//        arr = new int[size];
+//        int v = 1;
+//        for (int i = 0; i < arr.length; i++) {
+//
+//            arr[i] = v;
+//
+//
+//            v = v + 2;
+//
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println();
+//
+//        for (int i = arr.length - 1; i > 0; i--) {
+//
+//            System.out.print(arr[i] + " ");
+//
+//
+//        }
+//        System.out.println();
+//
+//
+//        System.out.println(" Задача 3 ");     //Задача 3
+//
+//        int[] ark = new int[15];
+//        Random rnd = new Random();
+//        for (int i = 0; i < ark.length; i++) {
+//            ark[i] = rnd.nextInt(99);
+//
+//
+//        }
+//        System.out.println(Arrays.toString(ark));
+//
+//
+//        int is = 0;
+//        int it = ark[0];
+//        for (int i = 0; i < ark.length; i++) {
+//            if (it < ark[i]) ;
+//
+//            it = ark[i];
+//            is = i;
+//
+//        }
+//        System.out.println(it + " " + is);
+//
+//
+//        System.out.println(" Задача 4 ");     // Задача 4
+//
+//
+//        int[] ara = new int[20];
+//        Random rnm = new Random();
+//        for (int i = 0; i < ara.length; i++) {
+//            ara[i] = rnm.nextInt(20);
+//
+//        }
+//        System.out.println(Arrays.toString(ara));
+//
+//        for (int i = 0; i < ara.length; i++) {
+//            if (i % 2 != 0) {
+//                ara[i] = 0;
+//
+//            }
+//            System.out.print(ara[i] + " ");
+//
+//
+//        }
+//        System.out.println();
+//
+//
+//        System.out.println("Задача 5");     // Задача 5
+//
+//        int[] arb = new int[5];
+//        int[] are = new int[5];
+//        Random rnn = new Random();
+//
+//        for (int i = 0; i < 5; i++) {
+//            arb[i] = rnn.nextInt(15);
+//            are[i] = rnn.nextInt(15);
+//
+//
+//        }
+//        System.out.println(Arrays.toString(arb));
+//        System.out.println(Arrays.toString(are));
+//
+//
+//        double avg1 = 0;
+//        double avg2 = 0;
+//        double result1 = 0;
+//        double result2 = 0;
+//        for (int i = 0; i < arb.length; i++) {
+//            result1 = arb[i] + result1;
+//
+//
+//        }
+//        System.out.println(result1 + " Сумма всех элементов 1-го массива ");
+//        avg1 = result1 / 5;
+//        System.out.println(avg1 + " Среднее арифметическое 1 массива ");
+//
+//        for (int i = 0; i < are.length; i++) {
+//            result2 = are[i] + result2;
+//
+//        }
+//        System.out.println(result2 + " Сумма всех элементов 2-го массива ");
+//        avg2 = result2 / 5;
+//        System.out.println(avg2 + " Среднее арифметическое 2 массива ");
+//
+//        if (avg2 < avg1) {
+//
+//            System.out.println(" Среднее арифметическое Второго массива меньше среднего арифметического Первого массива ");
+//        } else if (avg1 < avg2) {
+//            System.out.println(" Среднее арифметическое Первого массива меньше среднего арифметического Второго массива ");
+//        } else {
+//            System.out.println(" Среднее арифметическое равны друг другу ");
+//
+//        }
+//        System.out.println();
+//
+//        System.out.println(" Задача 6 ");       // Задача 6
+//
+//
+//        int[] ass = new int[12];
+//        Random ran = new Random();
+//        for (int i = 0; i < ass.length; i++) {
+//            ass[i] = ran.nextInt(15);
+//        }
+//
+//        int max = 0;
+//        int ind = 0;
+//        for (int i = 0; i < ass.length; i++) {
+//
+//            if (max < ass[i]) {
+//                max = ass[i];
+//                ind = i;
+//
+//            }
+//
+//
+//        }
+//        System.out.println(Arrays.toString(ass));
+//        System.out.println(" Индекс Максимального элемента " + ind);
 
-        System.out.println(" Задание 1 ");
+
+        System.out.println(" Задача 7 ");            // Задача 7
+
+        int[] mas7 = new int[10];
+        Random rdn = new Random();
+        for (int i = 0; i < mas7.length; i++) {
+            mas7[i] = rdn.nextInt(99);
 
 
-        int[] array;
-        int bb = 0;
+        }
+        boolean IsStop = false;
+        String str7 = " Элементы различны ";
+        System.out.println(Arrays.toString(mas7));
+        for (int i = 1; i < mas7.length; i++) {
+            for (int i1 = mas7.length - 1 ; i1 > i; i1--) {
+                if (mas7[i] == mas7[i1]) ;
+                {
+                    IsStop = true;
+                    str7 = " Элементы Равны ";
+                    break;
 
 
-        for (int i = 0; i < 20; i++) {
-            if (i % 2 == 0) {
-                bb++;
+                }
+
+            }
+            if (IsStop) {
+                break;
             }
 
 
         }
-        System.out.println(bb);
+        System.out.println(str7);
 
-
-        array = new int[bb];
-        int m = 0;
-        for (int i = 0; i < array.length; i++) {
-            array[i] = m;
-
-            m = m + 2;
-
-
-        }
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " ");
-        }
-        System.out.println();
-
-
-        System.out.println(" Задача №2 ");
-
-        int size = 0;
-        int[] arr;
-        for (int i = 1; i < 100; i++) {
-            if (i % 2 != 0) {
-                size++;
-            }
-
-
-        }
-        System.out.println(size);
-        arr = new int[size];
-        int v = 1;
-        for (int i = 0; i < arr.length; i++) {
-
-            arr[i] = v;
-
-
-            v = v + 2;
-
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-
-        for (int i = arr.length - 1; i > 0; i--) {
-
-            System.out.print(arr[i] + " ");
-
-
-        }
-
-
-        System.out.println(" Задача 3 ");
-
-        int[] ark = new int[15];
-        Random rnd = new Random();
-        for (int i = 0; i < ark.length; i++) {
-            ark[i] = rnd.nextInt(99);
-
-
-        }
-        System.out.println(Arrays.toString(ark));
-
-
-        int is = 0;
-        int it = ark[0];
-        for (int i = 0; i < ark.length; i++) {
-            if (it < ark[i]);
-
-            it = ark[i];
-            is = i;
-
-        }
-        System.out.println(it +" " + is);
 
     }
 
 
 }
-
 
 
 
