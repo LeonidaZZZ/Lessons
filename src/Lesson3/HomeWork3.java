@@ -103,7 +103,7 @@ public class HomeWork3 {
 //        int index = 0;
 //
 //        for (int i = 0; i < ara.length; i++) {
-//            if (min < ara[i]) {
+//            if (min > ara[i]) {
 //                min = ara[i];
 //                index = i;
 //            }
@@ -169,7 +169,7 @@ public class HomeWork3 {
 //        if (avg51 > avg52) {
 //            System.out.println("Среднее арифметическое значение 1го массива больше");
 //        } else if (avg51 == avg52) {
-//            System.out.println("Средние фрифметические значений равны");
+//            System.out.println("Средние арифметические значений равны");
 //        } else {
 //            System.out.println("Среднее арифметическое 2го массива юольше");
 //        }
@@ -207,7 +207,7 @@ public class HomeWork3 {
 //            mas7[i] = rnd7.nextInt(9);
 //        }
 //        System.out.println(Arrays.toString(mas7));
-
+//
 //        Boolean isStop = false;
 //        String str7 = "Элементы различны";
 //
@@ -221,45 +221,247 @@ public class HomeWork3 {
 //
 //            }
 //            if (isStop) {
-//
 //                break;
-//
 //            }
-//
-//
 //        }
 //        System.out.println(str7);
 
-        System.out.println("Задача 8");             // Задача 8
+//        System.out.println("Задача 8");             // Задача 8
+//
+//        Scanner scan8 = new Scanner(System.in);
+//
+//        System.out.println("Введите четное положительное число");
+//
+//        int num8 = scan8.nextInt();
+//        int[] array8;
+//
+//
+//        while (num8 <= 0 || num8 % 2 != 0) {
+//
+//            System.out.println("Вы ввели не верное числою Попробуйте ещё раз");
+//            num8 = scan8.nextInt();
+//        }
+//
+//        array8 = new int[num8];
+//        Random rnd8 = new Random();
+//
+//        for (int i = 0; i < array8.length; i++) {
+//            array8[i] = rnd8.nextInt(15);
+//        }
+//        System.out.println(Arrays.toString(array8));
+//
+//        int summLeft = 0;
+//        int summRight = 0;
+//
+//        for (int i = 0; i < array8.length; i++) {
+//            if(i < array8.length / 2){
+//                summLeft = summLeft + array8[i];
+//            }
+//            else{ summRight = summRight + array8[i];
+//
+//            }
+//        }
+//        if(summLeft > summRight){
+//            System.out.println("Сумма левой половины массива больше");
+//        }
+//        else if (summLeft == summRight){
+//            System.out.println("Суммы половин массива равны");
+//        }
+//        else {
+//            System.out.println("Сумма правой половины массива больше");
+//        }
 
-        Scanner scan8 = new Scanner(System.in);
-
-        System.out.println("Введите положительное число");
-
-        int num8 = scan8.nextInt();
-        int[]array8;
+        System.out.println("Задача 9");             // Крестиеи нолики  //
 
 
-        while (true) {
+        Scanner scan9 = new Scanner(System.in);
 
-            if (num8 < 0 || num8 == 0) {
-                System.out.println("Вы ввели неверное число,попробуйте еще раз");
-                scan8.next();
+
+        String[][] game = new String[3][3];
+        for (int i = 0; i < game.length; i++) {
+            for (int i1 = 0; i1 < game.length; i1++) {
+                game[i][i1] = "#";
             }
+        }
 
-            else {  array8 = new int[num8];
-                Random rnd8 = new Random();
-                for (int i = 0; i < array8.length; i++) {
-                    array8[i] = rnd8.nextInt(15);
+        int x;
+        int y;
+
+        System.out.println("Игра началась");            // от 0 до 2 через пробел
+        Boolean gameOwer = false;
+        while (!gameOwer) {
+            System.out.println("Игрок 1 ваш ход");
+            x = scan9.nextInt();
+            y = scan9.nextInt();
+            while (true) {
+                if (game[x][y] == "#") {
+                    game[x][y] = "x";
+                    break;
+                } else {
+                    System.out.println("Не верный ход. Ходите снова");
+                    x = scan9.nextInt();
+                    y = scan9.nextInt();
                 }
-                System.out.println(Arrays.toString(array8));
+            }
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    System.out.print(game[i][i1]);
+                }
+                System.out.println();
+            }
+            gameOwer = true;
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    if (game[i][i1] == "#") {
+                        gameOwer = false;
+                        break;
+                    }
+                }
+                if (!gameOwer) {
+                    break;
+                }
+            }
+            if (gameOwer) {
+                System.out.println("Ничья");
                 break;
+            }
 
+            for (int i = 0, j = 0; i < game.length; i++) {
+
+                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+
+                    System.out.println("Win");
+                    gameOwer = true;
+                    break;
+                }
+                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
+
+                    System.out.println("Win");
+                    gameOwer = true;
+                    break;
+                }
 
             }
+            if(gameOwer){
+                break;
+            }
+
+            String[] sDiag = new String[game.length];
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = game.length - 1 - i; j <= i; j--) {
+
+                    sDiag[i] = game[i][j];
+                    break;
+                }
+            }
+            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+                System.out.println("Win");
+                break;
+            }
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = 0; j < game.length; j++) {
+
+                   if (i == j){
+                       sDiag[i] = game[i][j];
+                   }
+                }
+            }
+            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+                System.out.println("Win");
+                break;
+            }
+
+
+            System.out.println("Ход игрока 2");
+
+
+            x = scan9.nextInt();
+            y = scan9.nextInt();
+            while (true) {
+                if (game[x][y] == "#") {
+                    game[x][y] = "O";
+                    break;
+                } else {
+                    System.out.println("Не верный ход. Ходите снова");
+                    x = scan9.nextInt();
+                    y = scan9.nextInt();
+                }
+            }
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    System.out.print(game[i][i1]);
+                }
+                System.out.println();
+            }
+            gameOwer = true;
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    if (game[i][i1] == "#") {
+                        gameOwer = false;
+                        break;
+                    }
+                }
+                if (!gameOwer) {
+                    break;
+                }
+            }
+            if (gameOwer) {
+                System.out.println("Ничья");
+                break;
+            }
+
+            for (int i = 0, j = 0; i < game.length; i++) {
+
+                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+
+                    System.out.println("Win");
+                    gameOwer = true;
+                    break;
+                }
+                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
+
+                    System.out.println("Win");
+                    gameOwer = true;
+                    break;
+                }
+
+            }
+            if(gameOwer){
+                break;
+            }
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = game.length - 1 - i; j <= i; j--) {
+
+                    sDiag[i] = game[i][j];
+                    break;
+                }
+            }
+            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+                System.out.println("Win");
+                break;
+            }
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = 0; j < game.length; j++) {
+
+                    if (i == j){
+                        sDiag[i] = game[i][j];
+                    }
+                }
+            }
+            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+                System.out.println("Win");
+                break;
+            }
+
 
 
         }
+
+
     }
 
 }

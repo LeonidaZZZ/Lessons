@@ -70,7 +70,7 @@ public class Domashka2 {
 
 
 //
-//        System.out.println("cw 2");
+//        System.out.println("cw 2");               //exercise 2
 //
 //        Scanner scan = new Scanner(System.in);
 //        System.out.println("Введите 2 числа");
@@ -81,7 +81,7 @@ public class Domashka2 {
 //
 //        System.out.println("Вы ввели число" + res);
 //
-//        System.out.println("cw w");
+//        System.out.println("cw 3");               // exercise 3
 //
 //        Scanner myScanner = new Scanner(System.in);
 //        System.out.println("Введите число");
@@ -91,11 +91,13 @@ public class Domashka2 {
 //                i = myScanner.nextInt();
 //                System.out.println("Вы ввели " + i);
 //                break;
-//            } else {
+//            }
+//            else {
 //                System.out.println("Попробуйте еще раз");
 //                myScanner.next();
 //            }
 //        }
+//    }
 
 
 //        System.out.println("Массив");
@@ -122,7 +124,7 @@ public class Domashka2 {
         int[] ints = {23, 156, 123, 12};
 //        Arrays.sort(ints);                                  // сортировка для четких пацанов
 
-//        for (int j = 0; j < ints.length; j++) {             //сортировка массива пузырьком
+//        for (int j = 0; j < ints.length; j++) {
 //
 //            System.out.println(ints[j]);
 //        }
@@ -131,7 +133,7 @@ public class Domashka2 {
 
         System.out.println(Arrays.toString(ints));
 
-        for (int i = 0; i < ints.length; i++) {
+        for (int i = 0; i < ints.length; i++) {                 // сортировка пузырьком
             for (int j = ints.length - 1; j > i; j--) {
                 if (ints[j - 1] > ints[j]){
                     int tmp = ints[j - 1];
