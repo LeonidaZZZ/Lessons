@@ -2,6 +2,7 @@ package Lesson1;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class HomeWork {
     public static void main(String[] args) {
@@ -360,50 +361,264 @@ public class HomeWork {
 //                max = ass[i];
 //                ind = i;
 //
+//
 //            }
 //
 //
 //        }
 //        System.out.println(Arrays.toString(ass));
 //        System.out.println(" Индекс Максимального элемента " + ind);
+//
+////
+//        System.out.println(" Задача 7 ");            // Задача 7
+//
+//        int[] mas7 = new int[10];
+//        Random rdn = new Random();
+//        for (int i = 0; i < mas7.length; i++) {
+//            mas7[i] = rdn.nextInt(10);
+//
+//
+//        }
+//        boolean IsStop = false;
+//        String str7 = " Элементы различны ";
+//        System.out.println(Arrays.toString(mas7));
+//        for (int i = 0; i < mas7.length; i++) {
+//            for (int i1 = mas7.length - 1; i1 > i; i1--) {
+//                if (mas7[i] == mas7[i1]) {
+//                    IsStop = true;
+//                    str7 = " Элементы Равны ";
+//                    break;
+//                }
+//            }
+//            if (IsStop) {
+//                break;
+//            }
+//
+//        }
+//        System.out.println(str7);
+//
+//        System.out.println(" Задача 8 ");       // Задача 8
+//
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println(" Введите любое положительное число ");
+//        int numb = scan.nextInt();
+//        System.out.println(" Вы ввели число " + numb);
+//
+//        int[] mas8 = new int[12];
+//        Random rnd8 = new Random();
+//        for (int i = 0; i < mas8.length; i++) {
+//            mas8[i] = rnd8.nextInt(15);
+//
+//
+//        }
 
 
-        System.out.println(" Задача 7 ");            // Задача 7
+        System.out.println("Крестики нолики");
 
-        int[] mas7 = new int[10];
-        Random rdn = new Random();
-        for (int i = 0; i < mas7.length; i++) {
-            mas7[i] = rdn.nextInt(99);
 
+        //Кресики нолки
+
+        Scanner games = new Scanner(System.in);
+        String[][] game = new String[3][3];
+        for (int i = 0; i < game.length; i++) {
+            for (int i1 = 0; i1 < game.length; i1++) {
+                game[i][i1] = "#";
+
+            }
 
         }
-        boolean IsStop = false;
-        String str7 = " Элементы различны ";
-        System.out.println(Arrays.toString(mas7));
-        for (int i = 1; i < mas7.length; i++) {
-            for (int i1 = mas7.length - 1 ; i1 > i; i1--) {
-                if (mas7[i] == mas7[i1]) ;
-                {
-                    IsStop = true;
-                    str7 = " Элементы Равны ";
+        int x;
+        int y;
+        System.out.println(" Игра началась ");
+        boolean gameOver = false;
+        while (!gameOver) {
+            System.out.println(" Игрок №1 ваш ход");
+            x = games.nextInt();
+            y = games.nextInt();
+            while (true) {
+                if (game[x][y] == "#") {
+                    game[x][y] = "x";
                     break;
+                } else {
+                    System.out.println(" Не верный ход, повторите попытку ");
+                    x = games.nextInt();
+                    y = games.nextInt();
+                }
 
 
+            }
+
+
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    System.out.print(game[i][i1] + " ");
+                }
+                System.out.println();
+
+            }
+            gameOver = true;
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    if (game[i][i1] == "#") ;
+                    {
+                        gameOver = false;
+                        break;
+                    }
+
+                }
+                if (!gameOver) {
+                    break;
                 }
 
             }
-            if (IsStop) {
+            if (gameOver) {
+                System.out.println(" Ничья !");
+                break;
+            }
+            for (int i = 0, j = 0; i < game.length; i++) {
+                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+                    System.out.println("Победа!");
+                    gameOver = true;
+                    break;
+
+                }
+                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#") {
+                    System.out.println("Победа!");
+                    gameOver = true;
+                    break;
+
+                }
+
+
+            }
+            if (gameOver) {
+                break;
+            }
+            String[] sDiag = new String[game.length];
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = game.length - 1 - i; j <= i; j--) {
+                    sDiag[i] = game[i][j];
+                    break;
+                }
+
+            }
+
+                if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#") {
+                    System.out.println("Победа!");
+                    break;
+                }
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = 0; j < game.length; j++) {
+                    if(i == j){
+                        sDiag[i] = game[i][j];
+                    }
+
+                }
+
+            }if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#") {
+                System.out.println("Победа!");
+                break;
+            }
+
+            System.out.println(" Игрок №2 ваш ход");
+
+            x = games.nextInt();
+            y = games.nextInt();
+            while (true) {
+                if (game[x][y] == "#") {
+                    game[x][y] = "о";
+                    break;
+                } else {
+                    System.out.println(" Не верный ход, повторите попытку ");
+                    x = games.nextInt();
+                    y = games.nextInt();
+                }
+
+
+            }
+
+
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    System.out.print(game[i][i1] + " ");
+                }
+                System.out.println();
+
+            }
+            gameOver = true;
+            for (int i = 0; i < game.length; i++) {
+                for (int i1 = 0; i1 < game.length; i1++) {
+                    if (game[i][i1] == "#") ;
+                    {
+                        gameOver = false;
+                        break;
+                    }
+
+                }
+                if (!gameOver) {
+                    break;
+                }
+
+            }
+            if (gameOver) {
+                System.out.println(" Ничья !");
+                break;
+            }
+            for (int i = 0, j = 0; i < game.length; i++) {
+                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+                    System.out.println("Победа!");
+                    gameOver = true;
+                    break;
+
+                }
+                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#") {
+                    System.out.println("Победа!");
+                    gameOver = true;
+                    break;
+
+                }
+
+
+            }
+            if (gameOver) {
                 break;
             }
 
 
+            for (int i = 0; i < game.length; i++) {
+                for (int j = game.length - 1 - i; j <= i; j--) {
+                    sDiag[i] = game[i][j];
+                    break;
+                }
+
+            }
+
+            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#") {
+                System.out.println("Победа!");
+                break;
+            }
+
+            for (int i = 0; i < game.length; i++) {
+                for (int j = 0; j < game.length; j++) {
+                    if(i == j){
+                        sDiag[i] = game[i][j];
+                    }
+
+                }
+
+            }if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#") {
+                System.out.println("Победа!");
+                break;
+            }
+
+
+
         }
-        System.out.println(str7);
 
 
     }
-
-
 }
 
 

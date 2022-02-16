@@ -9,7 +9,8 @@ public class Aboba {
     private static int count;
 
     public static void main(String[] args) {
-        System.out.println(" Задача 1 ");
+    }
+
 //
 //        int pp = 10000000;
 //        int br = 14;
@@ -187,61 +188,61 @@ public class Aboba {
 //            count++;
 //            result = array[i] + result;
 //        }
-        System.out.println(" НОВАЯ ТЕМА ");
-
-        int[][] array = new int[3][3];         // Двумерный Массив
-        System.out.println(array[0].length);
-
-        Random random = new Random();
-
-
-        for (int i = 0; i < array.length; i++) {
-            for (int i1 = 0; i1 < array.length; i1++) {
-                array[i][i1] = random.nextInt(10);
-
-            }
-
-        }
-        for (int i = 0; i < array.length; i++) {
-            for (int i1 = 0; i1 < array.length; i1++) {
-                System.out.print(array[i][i1] + " ");
-
-
-            }
-            System.out.println();
-
-        }
-        for (int i = 0; i < array.length; i++) {
-            for (int i1 = 0; i1 < array.length; i1++) {
-                if (i == i1) {
-                    System.out.print(array[i][i1] + " ");
+//        System.out.println(" НОВАЯ ТЕМА ");
+//
+//        int[][] array = new int[3][3];         // Двумерный Массив
+//        System.out.println(array[0].length);
+//
+//        Random random = new Random();
+//
+//
+//        for (int i = 0; i < array.length; i++) {
+//            for (int i1 = 0; i1 < array.length; i1++) {
+//                array[i][i1] = random.nextInt(10);
+//
+//            }
+//
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            for (int i1 = 0; i1 < array.length; i1++) {
+//                System.out.print(array[i][i1] + " ");
+//
+//
+//            }
+//            System.out.println();
+//
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            for (int i1 = 0; i1 < array.length; i1++) {
+//                if (i == i1) {
+//                    System.out.print(array[i][i1] + " ");
+//                }
+//
+//
+//            }
+//
+//
+//        }
+//        System.out.println();
+//        for (int i = 0; i < array.length; i++) {
+//            for (int i1 = array.length - 1 - i; i1 >= 0; i1--) {
+//
+//
+//
+//                    System.out.print(array[i][i1] + " ");
+//                    break;
                 }
 
 
-            }
-
-
-        }
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            for (int i1 = array.length - 1 - i; i1 >= 0; i1--) {
 
 
 
-                    System.out.print(array[i][i1] + " ");
-                    break;
-                }
 
 
 
-            }
 
 
 
-        }
-
-
-    }
 
 
 
