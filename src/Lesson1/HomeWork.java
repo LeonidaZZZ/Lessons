@@ -436,7 +436,7 @@ public class HomeWork {
             x = games.nextInt();
             y = games.nextInt();
             while (true) {
-                if (game[x][y] == "#") {
+                if (x < game.length && y < game.length && game[x][y] == "#") {
                     game[x][y] = "x";
                     break;
                 } else {
@@ -447,8 +447,6 @@ public class HomeWork {
 
 
             }
-
-
             for (int i = 0; i < game.length; i++) {
                 for (int i1 = 0; i1 < game.length; i1++) {
                     System.out.print(game[i][i1] + " ");
@@ -527,7 +525,7 @@ public class HomeWork {
             x = games.nextInt();
             y = games.nextInt();
             while (true) {
-                if (game[x][y] == "#") {
+                if (x < game.length && y < game.length && game[x][y] == "#") {
                     game[x][y] = "о";
                     break;
                 } else {
