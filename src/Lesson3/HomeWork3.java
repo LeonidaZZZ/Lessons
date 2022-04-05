@@ -8,39 +8,39 @@ public class HomeWork3 {
     public static void main(String[] args) {
 
 
-//        System.out.println("Задача 1");               // Задача 1
-//
-//        int[] array;
-//        int res = 0;
-//
-//        for (int i = 1; i <= 20; i++) {
-//            if (i % 2 == 0) {
-//                res++;
-//            }
-//
-//        }
-//        array = new int[res];
-//        int g = 2;
-//
-//        for (int i = 0; i < array.length; i++) {
-//
-//            array[i] = g;
-//            g = g + 2;
-//        }
-//
-//        for (int i = 0; i < array.length; i++) {
-//
-//            System.out.println(array[i] + " ");
-//        }
-//
-//
-//        System.out.println();
-//
-//        for (int i = 0; i < array.length; i++) {
-//            System.out.print(array[i] + " ");
-//
-//        }
-//        System.out.println();
+        System.out.println("Задача 1");               // Задача 1
+
+        int[] array;
+        int res = 0;
+
+        for (int i = 1; i <= 20; i++) {
+            if (i % 2 == 0) {
+                res++;
+            }
+
+        }
+        array = new int[res];
+        int g = 2;
+
+        for (int i = 0; i < array.length; i++) {
+
+            array[i] = g;
+            g = g + 2;
+        }
+
+        for (int i = 0; i < array.length; i++) {
+
+            System.out.print(array[i] + " ");
+        }
+
+
+        System.out.println();
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i] + " ");
+
+        }
+        System.out.println();
 //
 //        System.out.println(" Задача 2");          // Задача 2
 //
@@ -271,195 +271,195 @@ public class HomeWork3 {
 //            System.out.println("Сумма правой половины массива больше");
 //        }
 
-        System.out.println("Задача 9");             // Крестиеи нолики  //
-
-
-        Scanner scan9 = new Scanner(System.in);
-
-
-        String[][] game = new String[3][3];
-        for (int i = 0; i < game.length; i++) {
-            for (int i1 = 0; i1 < game.length; i1++) {
-                game[i][i1] = "#";
-            }
-        }
-
-        int x;
-        int y;
-
-        System.out.println("Игра началась");            // от 0 до 2 через пробел
-        Boolean gameOwer = false;
-        while (!gameOwer) {
-            System.out.println("Игрок 1 ваш ход");
-            x = scan9.nextInt();
-            y = scan9.nextInt();
-            while (true) {
-                if (game[x][y] == "#") {
-                    game[x][y] = "x";
-                    break;
-                } else {
-                    System.out.println("Не верный ход. Ходите снова");
-                    x = scan9.nextInt();
-                    y = scan9.nextInt();
-                }
-            }
-            for (int i = 0; i < game.length; i++) {
-                for (int i1 = 0; i1 < game.length; i1++) {
-                    System.out.print(game[i][i1]);
-                }
-                System.out.println();
-            }
-            gameOwer = true;
-            for (int i = 0; i < game.length; i++) {
-                for (int i1 = 0; i1 < game.length; i1++) {
-                    if (game[i][i1] == "#") {
-                        gameOwer = false;
-                        break;
-                    }
-                }
-                if (!gameOwer) {
-                    break;
-                }
-            }
-            if (gameOwer) {
-                System.out.println("Ничья");
-                break;
-            }
-
-            for (int i = 0, j = 0; i < game.length; i++) {
-
-                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
-
-                    System.out.println("Win");
-                    gameOwer = true;
-                    break;
-                }
-                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
-
-                    System.out.println("Win");
-                    gameOwer = true;
-                    break;
-                }
-
-            }
-            if(gameOwer){
-                break;
-            }
-
-            String[] sDiag = new String[game.length];
-
-            for (int i = 0; i < game.length; i++) {
-                for (int j = game.length - 1 - i; j <= i; j--) {
-
-                    sDiag[i] = game[i][j];
-                    break;
-                }
-            }
-            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
-                System.out.println("Win");
-                break;
-            }
-
-            for (int i = 0; i < game.length; i++) {
-                for (int j = 0; j < game.length; j++) {
-
-                   if (i == j){
-                       sDiag[i] = game[i][j];
-                   }
-                }
-            }
-            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
-                System.out.println("Win");
-                break;
-            }
-
-
-            System.out.println("Ход игрока 2");
-
-
-            x = scan9.nextInt();
-            y = scan9.nextInt();
-            while (true) {
-                if (game[x][y] == "#") {
-                    game[x][y] = "O";
-                    break;
-                } else {
-                    System.out.println("Не верный ход. Ходите снова");
-                    x = scan9.nextInt();
-                    y = scan9.nextInt();
-                }
-            }
-            for (int i = 0; i < game.length; i++) {
-                for (int i1 = 0; i1 < game.length; i1++) {
-                    System.out.print(game[i][i1]);
-                }
-                System.out.println();
-            }
-            gameOwer = true;
-            for (int i = 0; i < game.length; i++) {
-                for (int i1 = 0; i1 < game.length; i1++) {
-                    if (game[i][i1] == "#") {
-                        gameOwer = false;
-                        break;
-                    }
-                }
-                if (!gameOwer) {
-                    break;
-                }
-            }
-            if (gameOwer) {
-                System.out.println("Ничья");
-                break;
-            }
-
-            for (int i = 0, j = 0; i < game.length; i++) {
-
-                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
-
-                    System.out.println("Win");
-                    gameOwer = true;
-                    break;
-                }
-                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
-
-                    System.out.println("Win");
-                    gameOwer = true;
-                    break;
-                }
-
-            }
-            if(gameOwer){
-                break;
-            }
-
-            for (int i = 0; i < game.length; i++) {
-                for (int j = game.length - 1 - i; j <= i; j--) {
-
-                    sDiag[i] = game[i][j];
-                    break;
-                }
-            }
-            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
-                System.out.println("Win");
-                break;
-            }
-
-            for (int i = 0; i < game.length; i++) {
-                for (int j = 0; j < game.length; j++) {
-
-                    if (i == j){
-                        sDiag[i] = game[i][j];
-                    }
-                }
-            }
-            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
-                System.out.println("Win");
-                break;
-            }
-
-
-
-        }
+//        System.out.println("Задача 9");             // Крестиеи нолики  //
+//
+//
+//        Scanner scan9 = new Scanner(System.in);
+//
+//
+//        String[][] game = new String[3][3];
+//        for (int i = 0; i < game.length; i++) {
+//            for (int i1 = 0; i1 < game.length; i1++) {
+//                game[i][i1] = "#";
+//            }
+//        }
+//
+//        int x;
+//        int y;
+//
+//        System.out.println("Игра началась");            // от 0 до 2 через Enter
+//        Boolean gameOwer = false;
+//        while (!gameOwer) {
+//            System.out.println("Игрок 1 ваш ход");
+//            x = scan9.nextInt();
+//            y = scan9.nextInt();
+//            while (true) {
+//                if (game[x][y] == "#") {
+//                    game[x][y] = "x";
+//                    break;
+//                } else {
+//                    System.out.println("Не верный ход. Ходите снова");
+//                    x = scan9.nextInt();
+//                    y = scan9.nextInt();
+//                }
+//            }
+//            for (int i = 0; i < game.length; i++) {
+//                for (int i1 = 0; i1 < game.length; i1++) {
+//                    System.out.print(game[i][i1]);
+//                }
+//                System.out.println();
+//            }
+//            gameOwer = true;
+//            for (int i = 0; i < game.length; i++) {
+//                for (int i1 = 0; i1 < game.length; i1++) {
+//                    if (game[i][i1] == "#") {
+//                        gameOwer = false;
+//                        break;
+//                    }
+//                }
+//                if (!gameOwer) {
+//                    break;
+//                }
+//            }
+//            if (gameOwer) {
+//                System.out.println("Ничья");
+//                break;
+//            }
+//
+//            for (int i = 0, j = 0; i < game.length; i++) {
+//
+//                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+//
+//                    System.out.println("Win");
+//                    gameOwer = true;
+//                    break;
+//                }
+//                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
+//
+//                    System.out.println("Win");
+//                    gameOwer = true;
+//                    break;
+//                }
+//
+//            }
+//            if(gameOwer){
+//                break;
+//            }
+//
+//            String[] sDiag = new String[game.length];
+//
+//            for (int i = 0; i < game.length; i++) {
+//                for (int j = game.length - 1 - i; j <= i; j--) {
+//
+//                    sDiag[i] = game[i][j];
+//                    break;
+//                }
+//            }
+//            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+//                System.out.println("Win");
+//                break;
+//            }
+//
+//            for (int i = 0; i < game.length; i++) {
+//                for (int j = 0; j < game.length; j++) {
+//
+//                   if (i == j){
+//                       sDiag[i] = game[i][j];
+//                   }
+//                }
+//            }
+//            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+//                System.out.println("Win");
+//                break;
+//            }
+//
+//
+//            System.out.println("Ход игрока 2");
+//
+//
+//            x = scan9.nextInt();
+//            y = scan9.nextInt();
+//            while (true) {
+//                if (game[x][y] == "#") {
+//                    game[x][y] = "O";
+//                    break;
+//                } else {
+//                    System.out.println("Не верный ход. Ходите снова");
+//                    x = scan9.nextInt();
+//                    y = scan9.nextInt();
+//                }
+//            }
+//            for (int i = 0; i < game.length; i++) {
+//                for (int i1 = 0; i1 < game.length; i1++) {
+//                    System.out.print(game[i][i1]);
+//                }
+//                System.out.println();
+//            }
+//            gameOwer = true;
+//            for (int i = 0; i < game.length; i++) {
+//                for (int i1 = 0; i1 < game.length; i1++) {
+//                    if (game[i][i1] == "#") {
+//                        gameOwer = false;
+//                        break;
+//                    }
+//                }
+//                if (!gameOwer) {
+//                    break;
+//                }
+//            }
+//            if (gameOwer) {
+//                System.out.println("Ничья");
+//                break;
+//            }
+//
+//            for (int i = 0, j = 0; i < game.length; i++) {
+//
+//                if (game[i][j] == game[i][j + 1] && game[i][j] == game[i][j + 2] && game[i][j] != "#") {
+//
+//                    System.out.println("Win");
+//                    gameOwer = true;
+//                    break;
+//                }
+//                if (game[j][i] == game[j + 1][i] && game[j][i] == game[j + 2][i] && game[j][i] != "#"){
+//
+//                    System.out.println("Win");
+//                    gameOwer = true;
+//                    break;
+//                }
+//
+//            }
+//            if(gameOwer){
+//                break;
+//            }
+//
+//            for (int i = 0; i < game.length; i++) {
+//                for (int j = game.length - 1 - i; j <= i; j--) {
+//
+//                    sDiag[i] = game[i][j];
+//                    break;
+//                }
+//            }
+//            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+//                System.out.println("Win");
+//                break;
+//            }
+//
+//            for (int i = 0; i < game.length; i++) {
+//                for (int j = 0; j < game.length; j++) {
+//
+//                    if (i == j){
+//                        sDiag[i] = game[i][j];
+//                    }
+//                }
+//            }
+//            if (sDiag[0] == sDiag[1] && sDiag[0] == sDiag[2] && sDiag[0] != "#"){
+//                System.out.println("Win");
+//                break;
+//            }
+//
+//
+//
+//        }
 
 
     }

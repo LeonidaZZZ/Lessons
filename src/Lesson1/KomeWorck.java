@@ -2,7 +2,8 @@ package Lesson1;
 
 class HomeWork {
     public static void main(String[] args) {
-//        System.out.println("HomeWork exercise 1");
+
+//        System.out.println("HomeWork exercise 1");          //Задача 1
 //
 //        int a = 20;
 //
@@ -18,7 +19,9 @@ class HomeWork {
 //        if (a <= -10 && a > -100) {
 //            System.out.println("Число отрицательное двузначное");
 //        }
-//        System.out.println("Ex2");
+//
+
+//        System.out.println("Ex2");                    // Задача 2
 //
 //
 //        int q = 17;
@@ -89,14 +92,17 @@ class HomeWork {
 //        double res = (double) s / (double) d;
 //
 //        System.out.println(res);
+
+
 //
-//        System.out.println("ex7");          //
+//        System.out.println("ex7");                           //   Задача пропрограмистов
 //
+
+
 //        int programmerCount = 121;
 //        if (programmerCount % 100 / 10 == 1) {
 //            System.out.println(programmerCount + " Програмистов");
-//        }
-//        else {
+//        } else {
 //
 //            switch (programmerCount % 10) {
 //                case 1:
@@ -111,8 +117,12 @@ class HomeWork {
 //                    System.out.println(programmerCount + " Програмистов");
 //            }
 //        }
+
+
 //        System.out.println("HomeWwork 2 ex 1");     //Создать прог. проверяющую и ссобщ на экран чет или не чет
 //
+
+
 //        int n = 13;
 //
 //        if (n % 10 / 2 == 0) {
@@ -203,8 +213,6 @@ class HomeWork {
 //        }
 
 
-
-
 //        for (int i = 1; i <= 10; i++) {
 //
 //            if (i % 2 != 0){
@@ -213,7 +221,6 @@ class HomeWork {
 //            System.out.print(i + " ");
 //
 //        }
-
 
 
 //        int gg = 142678;
@@ -244,8 +251,6 @@ class HomeWork {
 //            System.out.print(boofer + "\t");
 //
 //        }
-
-
 
 
     }
