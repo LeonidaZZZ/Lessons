@@ -12,7 +12,9 @@ public class LightVehicle extends LandTransport {
 
     @Override
     public String getInfo() {
-        return power + " " + maxSpeed + " " + weight+ " "+ brand+" " + wheelCount + " " +fuelExt + " " + numOfPassenger + " " + bodytype+ " " + getWatt();
+        return "Авто марки " + brand + " ,мощность " + power +" л/с максимальная скорость " + maxSpeed + " км/ч, расход топлива " +
+                fuelExt + " литров на 100 км ,масса кузова " + weight+ " ,тип кузова "+
+                bodytype + " ,колес " + wheelCount + " , пассажирских мест"  + numOfPassenger + " ,мощность в кВ/ч " +  getWatt();
     }
     public void getDistance(double hour){
         double distance = hour * maxSpeed;
@@ -20,6 +22,6 @@ public class LightVehicle extends LandTransport {
                 + distance +" и израсходует "+ petrolExt(distance) + " литров топлива");
     }
     private double petrolExt(double distance){
-        return  distance * maxSpeed/100;
+        return  maxSpeed/ 100 *fuelExt  ;
     }
 }
