@@ -19,9 +19,9 @@ public class LightVehicle extends LandTransport {
     public void getDistance(double hour){
         double distance = hour * maxSpeed;
         System.out.println("За время" + hour + " ч, автомобиль " + brand + " двигаясь с максимальной скоростью " + maxSpeed +" км/ч проедет "
-                + distance +" и израсходует "+ petrolExt(distance) + " литров топлива");
+                + distance +" и израсходует "+ petrolExt(hour) + " литров топлива");
     }
-    private double petrolExt(double distance){
-        return  maxSpeed/ 100 *fuelExt  ;
-    }
+    private double petrolExt(double hour){ return fuelExt * maxSpeed / 100 * hour ;}
+
+
 }

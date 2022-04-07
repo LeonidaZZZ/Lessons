@@ -12,7 +12,13 @@ public class CivilAirBoard extends AirTransport {
 
     @Override
     public String getInfo() {
-        return power + " " + maxSpeed + " " + weight+ " "+ brand+" " + wingspan + " " +minRoadLenght + " " + numOfPassenger + " " + hasBusinessClass + " " + getWatt();
+        return "Марка " + brand + " ,мощность " + power + " л/с , максимальная скорость " + maxSpeed + " км/ч" +
+                " ,вес " + weight + " размах крыльев - " + wingspan + " минимальная длина взлетной полосы - " + minRoadLenght +
+                " ,количество пассажирских мест - " + numOfPassenger + " ,наличие Бизнес класса" + hasBusinessClass + " ,мощность в кВ/ч " + getWatt();
+
+    }
+    public boolean passenger(int passenger){
+        return numOfPassenger >= passenger;
     }
 
 }
