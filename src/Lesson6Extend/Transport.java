@@ -16,7 +16,7 @@ public abstract class Transport {
 
     public abstract String getInfo();
 
-    public double getWatt(){
+    protected double getWatt(){
         return power * 0.74;
     }
 

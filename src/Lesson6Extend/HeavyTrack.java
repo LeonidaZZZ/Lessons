@@ -22,7 +22,6 @@ public class HeavyTrack extends LandTransport {
         } else {
             System.out.println("Нужен грузовик по больше");
         }
-
     }
 
 }
